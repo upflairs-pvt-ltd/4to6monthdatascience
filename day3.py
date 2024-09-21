@@ -1,4 +1,4 @@
-# ls = [10,20,30,50,60,70,80,90,25.2,36.5,'upflairs',True]
+# ls = [10,20,30,50,60,70,80,90,25.2,36.5,'upflairs',True]  # 
 # print(ls) 
 # print(type(ls))
 
@@ -29,7 +29,7 @@ ls2 = ls1
 # del ls2 
 ls2.append(5000)
 print(ls1) 
-ls1.extend()
+# ls1.extend()
 
 # ls3 = ls1.copy()   
 # ls3.pop(1)
@@ -43,6 +43,11 @@ ls1.extend()
 # num2 = 200 
 # del num2
 # print(num1)
+
+# difference between append and extend function in python  
+# copy vs deepcopy  
+
+
 
 
 
