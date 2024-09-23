@@ -53,5 +53,7 @@
 
 # set declaration method 
 st  = {10,85,65,45,72,72,72,72} 
+# insert  
+st.add(50)
 print(st) 
-print(type(st))
+# print(type(st))
