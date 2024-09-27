@@ -78,10 +78,10 @@
 # print(dict.fromkeys(ls,"upflairs"))
 
 
-dt1 =  {'A':25,'B':50,'C':75,'D':100}
-# dt1.setdefault()   #  home work
-output = [('A', 25), ('B', 50), ('C', 75), ('D', 100)]
-print(dict(output))
+# dt1 =  {'A':25,'B':50,'C':75,'D':100}
+# # dt1.setdefault()   #  home work
+# output = [('A', 25), ('B', 50), ('C', 75), ('D', 100)]
+# print(dict(output))
 
 
 
