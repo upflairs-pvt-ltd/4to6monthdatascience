@@ -61,11 +61,13 @@ dt = {'A':10,'B':20,'C':30,'D':40}
 #     count +=1 
 
 
-tpl = (10,20,30,40,50,60,70,80,90)
+# tpl = (10,20,30,40,50,60,70,80,90)
   
-for i, item in enumerate(tpl):
-    print(item,"  ===>  ",i," <==>  ",item,"  ===>  ",-((len(tpl)+1)-i-1))
+# for i, item in enumerate(tpl):
+    # print(item,"  ===>  ",i," <==>  ",item,"  ===>  ",-((len(tpl)+1)-i-1))
 
 
+# for i in range(10):
+    # print(10-i-1)
 
  
