@@ -47,6 +47,18 @@
 
 
 
+## <<<<<<<<<<<<<<, **Kwargs 
+# def testing(**data):
+    # for key , value in data.items():
+        # print(key,"  ===>  ",value)
+
+
+# testing(name='ayush',branch='cse',roll_no=102,college='jecrc')
+
+
+
+
+
 
 
 
