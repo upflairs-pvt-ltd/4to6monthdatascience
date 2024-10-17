@@ -15,6 +15,13 @@
 #         totalsum += item
 #     return totalsum
 
+num1  = int(input("plz enter your number : "))
+num2  = int(input("plz enter your number : "))
+print(f"Hey first number : {num1}  and second  number is : {num2}")
+result = num1 / num2  
+print(result) 
+
+
 # inputdata_ls = [10,20,30,40,50,60,70,80,90]
 # output = total_sum(ls=inputdata_ls)
 # print("Your sum is : ",output)
