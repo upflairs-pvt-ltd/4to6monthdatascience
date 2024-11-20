@@ -1,0 +1,14 @@
+(b'i think you want to fight with me.', ('127.0.0.1', 50727))
+byte string 
+
+message = data[0] 
+ip_address = data[1][0]
+
+
+media
+	inbox files  (message)   ==>   0hii how are you?
+	text files (files,same name) ==> 1 filename|file_content
+	pdf files ==> 2
+	python files ==> 3
+
+file <=== write 
