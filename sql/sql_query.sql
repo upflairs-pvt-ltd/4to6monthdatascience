@@ -52,3 +52,130 @@ SET SQL_SAFE_UPDATES = 0;
 -- SET SQL_SAFE_UPDATES = 1;
 delete  from studentdata where student_city="jaipur";
 select * from studentdata;
+
+
+
+
+show databases;
+use upflairs;
+show tables;
+select * from studentdata;
+
+update studentdata SET student_name = "Priya" where student_rollno = 104;
+
+update studentdata SET student_branch = "CSE" where student_rollno >= 104;
+update studentdata SET student_city = "DELHI" where student_branch = "CSE";
+
+
+delete , drop , truncate 
+drop ==> database or table  (object + data) 
+delete ==> to delete specific data 
+truncate  ==> object safe (data loss) 
+drop table studentdata;
+truncate studentdata;
+show tables;
+select * from studentdata;
+drop table studentdata;
+delete  from studentdata where student_branch="CS";
+
+
+
+show tables
+use upflairs;
+
+
+
+
+
+-- Create the Employees table
+CREATE TABLE Employees (
+    EmpID INT PRIMARY KEY,
+    EmpName VARCHAR(100),
+    DeptID INT
+);
+
+-- Insert data into Employees
+INSERT INTO Employees (EmpID, EmpName, DeptID) VALUES
+(1, 'Alice', 101),
+(2, 'Bob', 102),
+(3, 'Charlie', 101),
+(4, 'Diana', 103),
+(5, 'Eve', NULL);
+
+-- Create the Departments table
+CREATE TABLE Departments (
+    DeptID INT PRIMARY KEY,
+    DeptName VARCHAR(100),
+    Manager VARCHAR(100)
+);
+
+-- Insert data into Departments
+INSERT INTO Departments (DeptID, DeptName, Manager) VALUES
+(101, 'Human Resources', 'Karen'),
+(102, 'Finance', 'Tom'),
+(103, 'Engineering', 'Mike');
+
+-- Create the Projects table
+CREATE TABLE Projects (
+    ProjectID INT PRIMARY KEY,
+    ProjectName VARCHAR(100),
+    EmpID INT
+);
+
+-- Insert data into Projects
+INSERT INTO Projects (ProjectID, ProjectName, EmpID) VALUES
+(1001, 'Project Alpha', 1),
+(1002, 'Project Beta', 2),
+(1003, 'Project Gamma', 3),
+(1004, 'Project Delta', 4),
+(1005, 'Project Epsilon', NULL);
+
+
+
+
+
+
+show tables;
+
+select * from  projects;
+
+select * from employees INNER JOIN projects on employees.EmpID = projects.EmpID;
+
+-- alias 
+
+select * from employees as e INNER JOIN projects as p on e.EmpID = p.EmpID;
+
+select EmpName ,ProjectName , DeptID from employees as e INNER JOIN projects as p on e.EmpID = p.EmpID;
+
+
+
+select e.DeptID , e.EmpName ,p.ProjectName , e.EmpID from employees as e 
+INNER JOIN projects as p on e.EmpID = p.EmpID
+where e.DeptID = 101;
+
+
+select e.DeptID , e.EmpName ,p.ProjectName , e.EmpID from employees as e 
+right JOIN projects as p on e.EmpID = p.EmpID;
+
+
+select * from employees
+FULL JOIN projects;
+
+select * from employees
+natural JOIN projects;
+
+
+select * from projects
+natural JOIN departments;
+
+
+
+
+
+
+
+
+
+
+
+
