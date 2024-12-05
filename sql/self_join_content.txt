@@ -1,0 +1,14 @@
+-- Create the Employees table
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    ManagerID INT
+);
+
+-- Insert records into the Employees table
+INSERT INTO Employees (EmployeeID, Name, ManagerID)
+VALUES
+(1, 'Alice', NULL),  -- Alice is the top-level manager
+(2, 'Bob', 1),       -- Bob reports to Alice
+(3, 'Carol', 1),     -- Carol reports to Alice
+(4, 'David', 2);     -- David reports to Bob

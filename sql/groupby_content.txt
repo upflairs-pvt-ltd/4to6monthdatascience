@@ -1,0 +1,26 @@
+-- Create the Employees table
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Department VARCHAR(50),
+    Salary INT
+);
+
+-- Insert 15 records into the Employees table
+INSERT INTO Employees (EmployeeID, Name, Department, Salary)
+VALUES
+(1, 'Alice', 'HR', 50000),
+(2, 'Bob', 'IT', 60000),
+(3, 'Carol', 'HR', 55000),
+(4, 'David', 'Finance', 70000),
+(5, 'Eve', 'IT', 65000),
+(6, 'Frank', 'Finance', 72000),
+(7, 'Grace', 'HR', 52000),
+(8, 'Hank', 'IT', 67000),
+(9, 'Ivy', 'Marketing', 58000),
+(10, 'Jack', 'Marketing', 60000),
+(11, 'Kathy', 'Finance', 75000),
+(12, 'Liam', 'IT', 63000),
+(13, 'Mona', 'HR', 54000),
+(14, 'Nancy', 'Marketing', 62000),
+(15, 'Oscar', 'Finance', 80000);
