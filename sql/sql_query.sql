@@ -169,8 +169,106 @@ select * from projects
 natural JOIN departments;
 
 
+show databases;
+use upflairs
+show tables;
 
 
+create table B (test2 int);
+INSERT INTO B (test2) 
+values(5),(6),(7);
+select * from B;
+
+select * from A cross join B;
+select * from A,B;
+
+
+
+
+
+-- Create the Employees table
+CREATE TABLE Emp (
+    EmployeeID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    ManagerID INT
+);
+
+-- Insert records into the Employees table
+INSERT INTO Emp (EmployeeID, Name, ManagerID)
+VALUES
+(1, 'Alice', NULL),  -- Alice is the top-level manager
+(2, 'Bob', 1),       -- Bob reports to Alice
+(3, 'Carol', 1),     -- Carol reports to Alice
+(4, 'David', 2);     -- David reports to Bob
+
+
+select * from emp;
+
+select *  from emp as e1 
+inner join emp as e2 on e1.EmployeeID = e2.ManagerID;
+
+select *  from emp as e1 
+left join emp as e2 on e1.EmployeeID = e2.ManagerID;
+
+
+
+
+
+-- Create the Employees table
+CREATE TABLE Emp2 (
+    EmployeeID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Department VARCHAR(50),
+    Salary INT
+);
+
+-- Insert 15 records into the Employees table
+INSERT INTO Emp2 (EmployeeID, Name, Department, Salary)
+VALUES
+(1, 'Alice', 'HR', 50000),
+(2, 'Bob', 'IT', 60000),
+(3, 'Carol', 'HR', 55000),
+(4, 'David', 'Finance', 70000),
+(5, 'Eve', 'IT', 65000),
+(6, 'Frank', 'Finance', 72000),
+(7, 'Grace', 'HR', 52000),
+(8, 'Hank', 'IT', 67000),
+(9, 'Ivy', 'Marketing', 58000),
+(10, 'Jack', 'Marketing', 60000),
+(11, 'Kathy', 'Finance', 75000),
+(12, 'Liam', 'IT', 63000),
+(13, 'Mona', 'HR', 54000),
+(14, 'Nancy', 'Marketing', 62000),
+(15, 'Oscar', 'Finance', 80000);
+
+
+select  name,  max(salary) from emp2 where Department = "HR";
+
+SELECT  MAX(salary) 
+FROM emp2 
+WHERE Department = 'HR';
+
+select Department, count(*) from emp2
+group by Department;
+
+select Department, count(*) as no_of_count from emp2
+group by Department;
+
+
+select Department, avg(salary) as max_salary from emp2
+group by Department  order by max_salary limit 2 ;
+
+
+select Department, avg(salary) as average_salary from emp2
+group by Department having average_salary > 60000;
+
+select  distinct(Department) from emp2;
+
+
+select count(*) from emp2 where department = "HR" or department = "IT";
+select count(*) from emp2 where department in ("HR","IT");
+select * from emp2 where department in ("HR","IT");
+select * from emp2 where department not in ("HR","IT");
 
 
 
