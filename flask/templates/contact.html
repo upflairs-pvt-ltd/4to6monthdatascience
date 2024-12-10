@@ -7,6 +7,44 @@
 </head>
 <body>
     <h1>This is CONATCT PAGE - 😎</h1>
+
+    <div>
+        <h2> You can raise your query 😎</h2>
+
+        <form action="{{ url_for('userdata') }}" method="post">
+            <label for="">Name  :</label>
+            <input type="text" name="name" placeholder="enter your name" required>
+            
+            <br><br>
+            <label for="">Email  :</label>
+            <input type="email" name="email" placeholder="enter your email" required>
+            <br><br>
+
+            <label for="">contact :</label>
+            <input type="text" name="contact" placeholder="enter your email" required>
+            <br><br>
+
+
+
+            <label for="">Subject :</label>
+            <input type="text" name="subject" placeholder="enter your subjet" required>
+   
+
+            <br><br>
+
+            <label for="">message :</label>
+            <input type="text" name="message" placeholder="enter your message" required>
+            <br><br>
+ 
+
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+<br><br><br>
     <a href="/"><button>HOME</button></a>
+
+
 </body>
 </html>
