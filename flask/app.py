@@ -24,7 +24,7 @@ def about():
 
 @app.route("/contact")
 def contact():
-    print(session['job_designation'])
+    # print(session['job_designation'])
     return render_template('contact.html') 
 
 
@@ -54,11 +54,8 @@ def userdata():
         subject = request.form['subject']
         message = request.form['message']
         user_data = {"Name":name,"email":email,"contact":contact,"subject":subject,"message":message}
+        print(user_data)
         return  user_data 
-
-
-
-
 
 
 if __name__ == "__main__":
