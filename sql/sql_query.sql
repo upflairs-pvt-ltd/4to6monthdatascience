@@ -270,6 +270,10 @@ select count(*) from emp2 where department in ("HR","IT");
 select * from emp2 where department in ("HR","IT");
 select * from emp2 where department not in ("HR","IT");
 
+show databases;
+use laptop;
+show tables;
+select * from table_name;
 
 
 

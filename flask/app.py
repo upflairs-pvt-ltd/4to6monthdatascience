@@ -4,6 +4,11 @@
 ## templates  ==> webpages (html files)
 
 from flask import Flask,render_template,render_template_string,session,url_for,request
+import mysql.connector as mc 
+conn = mc.connect(host="localhost",username="root",password="Radhey254875",database="flaskapp")
+query = """insert into contactdata (name,contact,email,subject,message)
+           values (%s,%s,%s,%s,%s)"""
+
 
 app = Flask(__name__)   # __main__ 
 app.secret_key = "dkfd4343"
@@ -53,9 +58,20 @@ def userdata():
         contact = request.form['contact']
         subject = request.form['subject']
         message = request.form['message']
-        user_data = {"Name":name,"email":email,"contact":contact,"subject":subject,"message":message}
-        print(user_data)
-        return  user_data 
+        contact_detail = (name,contact,email,subject,message)
+
+        try:
+            myc = conn.cursor()   ## cursor object 
+            myc.execute(query,contact_detail)
+            conn.commit()
+            print("Your record has been sent into databse!")
+        except Exception as e :
+            print("Unable to insert your data into database!",e)
+            conn.rollback()
+
+        myc.close()
+        conn.close()
+        return  "Your record has been sent into databse!"
 
 
 if __name__ == "__main__":
