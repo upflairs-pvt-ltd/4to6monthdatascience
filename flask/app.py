@@ -73,6 +73,27 @@ def userdata():
         conn.close()
         return  "Your record has been sent into databse!"
 
+# backend ===>   frontend 
+@app.route('/dashbord')
+def dashbord():
+
+    data = {"Name":"Radhey","age":27,"address":"mathura"}
+    subjects = ['math','physics','chemistry','science']
+    query = "select * from contactdata"
+    try:
+        myc = conn.cursor()   ## cursor object 
+        myc.execute(query)
+        data_from_database = myc.fetchall()
+        print("Your record has been sent into databse!")
+    except Exception as e :
+        print("Unable to insert your data into database!",e)
+        
+
+    myc.close()
+    conn.close()
+    return render_template('dashboard.html',userdata=data,sub=subjects,database=data_from_database)
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)  

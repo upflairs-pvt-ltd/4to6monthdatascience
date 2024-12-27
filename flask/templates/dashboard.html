@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is Dashboard</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing <br>
+         Aliquam recusandae, beatae quis dolore repellat quae dolorum sit <br>
+          tenetur, blanditiis voluptates velit aliquid voluptatibus nam ad ipsum <br>
+           optio dolores id quidem!</p>
+
+    <h3>User Data from backend</h3>
+    <p>{{ userdata }}</p>
+    <p><b>Name :  {{ userdata['Name'] }}</b></p> <br>
+    <p><b>Age :  {{ userdata['age'] }}</b></p> <br>
+    <p><b>Address :  {{ userdata['address'] }}</b></p> <br>
+{{ sub }}
+{% for item in sub %}
+<p><b>{{ item }}</b></p>
+
+{% endfor %}
+
+
+
+{% if 'maths' in sub  %}
+<p><b>Yes i have math</b></p>
+{% else %}
+<p><b>i dont have math</b></p>
+
+{% endif %}
+
+
+{{ database }}
+</body>
+</html>

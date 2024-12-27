@@ -53,13 +53,18 @@ SET SQL_SAFE_UPDATES = 0;
 delete  from studentdata where student_city="jaipur";
 select * from studentdata;
 
-
+show databases;
+use  flaskapp;
+show tables;
+desc contactdata;
+drop table contactdata;
 
 
 show databases;
 use upflairs;
 show tables;
 select * from studentdata;
+select * from contactdata;
 
 update studentdata SET student_name = "Priya" where student_rollno = 104;
 
