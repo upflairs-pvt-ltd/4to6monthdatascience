@@ -282,6 +282,120 @@ select * from table_name;
 
 
 
+show databases;
+create database learning;
+drop database learning;
+
+use learning;
+
+
+create table studentdata (stu_rollno int,  stu_name  varchar(25), stu_age int, stu_course varchar(25));
+show tables;
+drop table studentdata;
+
+desc studentdata;
+
+select * from studentdata;
+SELECT * FROM studentdata;
+
+insert into studentdata (stu_rollno ,  stu_name , stu_age , stu_course)
+values (3,"Nikita",24,"IT");
+
+
+insert into studentdata values (3,"Nikita",24,"IT");
+
+insert into studentdata 
+values (4,"saniya",25,"BSC"),
+    	(5,"ayush",26,"CSE"),
+        (6,"laksya",25,"CSE");
+
+
+SELECT * FROM studentdata;
+SELECT stu_name, stu_course  FROM studentdata;
+
+
+
+
+CREATE TABLE feesrecord (
+  st_name varchar(25),
+  st_course varchar(25),
+  st_fees varchar(4),
+  fee_amount int,
+  fees_date date
+);
+
+show tables;
+insert into feesrecord values("anshika","cse","yes",250,"2025-01-05");
+
+
+show databases;
+use learning;
+show tables;
+select * from studentdata;
+
+select * from feesrecord;
+delete drop truncate 
+
+SET SQL_SAFE_UPDATES = 0;
+
+DELETE  from studentdata  where stu_course="BSC";
+
+select * from studentdata;
+select * from feesrecord;
+truncate feesrecord;
+show tables;
+
+select * from studentdata where stu_course='cse';
+select * from studentdata where stu_age <= 25;
+
+select * from studentdata where stu_age <= 25 and stu_course='IT';
+select * from studentdata where stu_age <= 25 or stu_course='IT';
+
+
+select * from feesrecord;
+
+ALTER table feesrecord ADD column due_fee int;
+ALTER table feesrecord ADD  due_fees int;
+
+ALTER table feesrecord DROP column due_fee;
+ALTER table feesrecord DROP  due_fee;
+
+ALTER table feesrecord CHANGE due_fees fees_due int;
+
+alter table feesrecord RENAME column fees_due to due_fees;
+UPDATE  studentdata   SET stu_name = "Sania"  where stu_rollno=6;
+select * from studentdata;
+
+update studentdata set stu_age=20 where stu_course="it" and stu_name="anshika";
+
+select * from studentdata;
+
+show databases; 
+use learning;
+show tables;
+select stu_name,stu_age from studentdata;
+select * from studentdata where stu_course="IT";
+select * from studentdata where stu_age <= 25 or stu_course="IT";
+
+
+select * from feesrecord;
+drop table feesrecord; 
+truncate feesrecord;
+
+SET SQL_SAFE_UPDATES = 0;
+
+delete from studentdata where stu_name='ayush';
+delete from studentdata where stu_age <= 25;
+select * from studentdata;
+
+update studentdata set stu_course="civil" where stu_name = "sania";
+update studentdata set stu_course = "civil" where stu_age <= 25;
+
+select * from studentdata; 
+alter table studentdata add column extra int;
+alter table studentdata add  extra2 int; 
+alter table studentdata drop column extra2;
+alter table studentdata drop  extra;
 
 
 
