@@ -397,6 +397,32 @@ alter table studentdata add  extra2 int;
 alter table studentdata drop column extra2;
 alter table studentdata drop  extra;
 
+show tables;
+show databases;
+use joindemo;
+
+select * from employees natural join departments;
+select * from  projects;
+
+select * from departments natural join projects;
+
+select * from departments cross join projects;
+
+select min(DeptId) from departments;
+select max(DeptId) from departments;
+select avg(DeptId) from departments;
+select sum(DeptId) from departments;
+
+select round(avg(DeptId),2) from departments;
+
+show databases;
+use learning;
+select distinct  stu_course from studentdata;
+
+select * from studentdata order by stu_age;
+select * from studentdata order by stu_age desc;
+select * from studentdata order by stu_age desc limit 3;
+select * from studentdata order by stu_age desc limit 3 offset 1;
 
 
 
