@@ -424,5 +424,6 @@ select * from studentdata order by stu_age desc;
 select * from studentdata order by stu_age desc limit 3;
 select * from studentdata order by stu_age desc limit 3 offset 1;
 
+show databases;
 
 
