@@ -90,7 +90,7 @@
         <!-- Class -->
         <div class="mb-4">
           <label for="travelClass" class="form-label">Class</label>
-          <select class="form-select" id="travelClass" required>
+          <select name="flight_class" class="form-select" id="travelClass" required>
             <option value="">Select Class</option>
             <option value="0">Eco</option>
             <option value="1">Eco Plus</option>
@@ -105,19 +105,19 @@
         <!-- Age -->
         <div class="mb-4">
           <label for="age" class="form-label">Age</label>
-          <input type="number" class="form-control" id="age" placeholder="Enter your age" required>
+          <input type="number" name="age" class="form-control" id="age" placeholder="Enter your age" required>
         </div>
 
         <!-- Flight Distance -->
         <div class="mb-4">
           <label for="flightDistance" class="form-label">Flight Distance</label>
-          <input type="number" class="form-control" id="flightDistance" placeholder="Enter flight distance (in km)" required>
+          <input type="number" name="flight_distance" class="form-control" id="flightDistance" placeholder="Enter flight distance (in km)" required>
         </div>
 
         <!-- Inflight Entertainment -->
         <div class="mb-4">
           <label for="inflightEntertainment" class="form-label">Inflight Entertainment</label>
-          <select class="form-select" id="inflightEntertainment" required>
+          <select name="flght_enterment" class="form-select" id="inflightEntertainment" required>
             <option value="">Rate the Inflight Entertainment</option>
             <option value="1">1 - Poor</option>
             <option value="2">2 - Fair</option>
@@ -130,7 +130,7 @@
         <!-- Baggage Handling -->
         <div class="mb-4">
           <label for="baggageHandling" class="form-label">Baggage Handling</label>
-          <select class="form-select" id="baggageHandling" required>
+          <select name="bagage_handling" class="form-select" id="baggageHandling" required>
             <option value="">Rate Baggage Handling</option>
             <option value="1">1 - Poor</option>
             <option value="2">2 - Fair</option>
@@ -143,7 +143,7 @@
         <!-- Cleanliness -->
         <div class="mb-4">
           <label for="cleanliness" class="form-label">Cleanliness</label>
-          <select class="form-select" id="cleanliness" required>
+          <select name="cleaning" class="form-select" id="cleanliness" required>
             <option value="">Rate Cleanliness</option>
             <option value="1">1 - Poor</option>
             <option value="2">2 - Fair</option>
@@ -156,13 +156,13 @@
         <!-- Departure Delay in Minutes -->
         <div class="mb-4">
           <label for="departureDelay" class="form-label">Departure Delay in Minutes</label>
-          <input type="number" class="form-control" id="departureDelay" placeholder="Enter departure delay in minutes" required>
+          <input type="number" name="deprtr_delay" class="form-control" id="departureDelay" placeholder="Enter departure delay in minutes" required>
         </div>
 
         <!-- Arrival Delay in Minutes -->
         <div class="mb-4">
           <label for="arrivalDelay" class="form-label">Arrival Delay in Minutes</label>
-          <input type="number" class="form-control" id="arrivalDelay" placeholder="Enter arrival delay in minutes" required>
+          <input type="number" name="arival_delay" class="form-control" id="arrivalDelay" placeholder="Enter arrival delay in minutes" required>
         </div>
 
         <button type="submit" class="btn btn-primary w-100">Submit</button>
